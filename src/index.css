@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #FFFFFF;
+    color: #121212;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  *, ::before, ::after {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+  }
+}
+
+.font-mono-label {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #004a99;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: #121212;
+  color: #FFFFFF;
+  padding: 0.75rem 1.4rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #004a99;
+  box-shadow: 0 2px 8px rgba(0, 74, 153, 0.25);
+}
+
+.btn-outline {
+  background-color: #FFFFFF;
+  color: #121212;
+  padding: 0.7rem 1.25rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  border-radius: 4px;
+  border: 1px solid #121212;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: #121212;
+  color: #FFFFFF;
+}
+
+/* Print Optimization for Single-Page PDF Distribution */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #121212 !important;
+    font-size: 10pt !important;
+    line-height: 1.3 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  header, nav, footer, button, .no-print {
+    display: none !important;
+  }
+
+  .max-w-5xl, .max-w-4xl {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  section {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    border-top: 1px solid #e2e8f0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  h1 {
+    font-size: 20pt !important;
+    line-height: 1.15 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  h2 {
+    font-size: 14pt !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  h3 {
+    font-size: 12pt !important;
+  }
+
+  p, li, span {
+    font-size: 9.5pt !important;
+  }
+
+  .grid {
+    gap: 0.5rem !important;
+  }
+
+  .p-6, .p-8, .p-5 {
+    padding: 0.75rem !important;
+  }
+
+  .mb-8, .mb-6 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .pb-8, .pb-6 {
+    pb: 0.5rem !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #004a99;
+}

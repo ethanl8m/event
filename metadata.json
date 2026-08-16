@@ -1,0 +1,6 @@
+{
+  "name": "Executive Strategy Briefing 2026",
+  "description": "Executive Strategy Briefing 2026 portal for Singapore SMEs: RSVP pass management, agenda, interactive cash yield calculator, and venue logistics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
